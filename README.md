@@ -1,6 +1,9 @@
 AC week 7 實作 使用 mysql 實作 todo-list
 ===
- 
+
+![image](https://github.com/whynotwilson/todo-sequelize/blob/master/todo.jpg)
+
+
 **功能**
 --
 1. **會員系統**
