@@ -1,5 +1,5 @@
-// config/passport.js
 const LocalStrategy = require('passport-local').Strategy
+const bcrypt = require('bcryptjs')
 
 // 載入 User model
 const db = require('../models')
@@ -11,13 +11,18 @@ module.exports = passport => {
       User.findOne({ where: { email: email } })
         .then(user => {
           if (!user) {
-            return done(null, false, { message: 'That email is not registered' })
+            return done(null, false, { message: '此 Email 尚未註冊' })
           }
-          if (user.password !== password) {
-            console.log('user password not correct.')
-            return done(null, false, { message: 'Email or Password incorrect' })
-          }
-          return done(null, user)
+
+          bcrypt.compare(password, user.password, (err, isMatch) => {
+            if (err) throw err
+
+            if (isMatch) {
+              return done(null, user)
+            } else {
+              return done(null, false, { message: 'Email or 密碼不正確' })
+            }
+          })
         })
     })
   )
