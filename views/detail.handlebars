@@ -1,4 +1,4 @@
-<form action="/todos/{{{todo._id}}}/delete?_method=DELETE" method="post" style="display:inline">
+<form action="/todos/{{{todo.id}}}/delete?_method=DELETE" method="post" style="display:inline">
   <div class="input-group">
     <div class="input-group-prepend">
       <div class="input-group-text">
@@ -7,7 +7,7 @@
     </div>
     <input type="text" placeholder="name" name="name" value="{{{todo.name}}}" class="form-control" disabled>
     <div class="input-group-append">
-      <a href="/todos/{{{todo._id}}}/edit" class="btn btn-success">edit</a>
+      <a href="/todos/{{{todo.id}}}/edit" class="btn btn-success">edit</a>
       <button type="submit" class="btn btn-danger">delete</button>
     </div>
   </div>
