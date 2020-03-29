@@ -28,7 +28,9 @@ app.use(methodOverride('_method'))
 // 設定 passport & session
 app.use(passport.initialize())
 app.use(passport.session())
+
 require('./config/passport')(passport)
+
 app.use((req, res, next) => {
   res.locals = req.user
   next()
@@ -37,6 +39,7 @@ app.use((req, res, next) => {
 // 使用路由器
 app.use('/', require('./routes/home'))
 app.use('/users', require('./routes/user'))
+app.use('/todos', require('./routes/todo'))
 
 app.listen(port, () => {
   console.log('app is running......')
