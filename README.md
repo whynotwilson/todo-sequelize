@@ -28,11 +28,10 @@ express<br>
 express-handlebars<br>
 express-session<br>
 method-override<br>
-mongoose<br>
 passport<br>
 passport-facebook<br>
-passport-local<br><br>
-Sequelize
+passport-local<br>
+Sequelize<br><br>
 
 
 
