@@ -18,6 +18,7 @@ AC week 7 實作 使用 mysql 實作 todo-list
    * 刪除事項
 
 
+<br><br>
 建置環境
 --
 bcryptjs <br>
@@ -43,10 +44,10 @@ Sequelize<br><br>
 2.進入資料夾 expense-tracker-master<br>
 　　`cd todo-sequelize-master`<br>
   
-3.在 Terminal 輸入 npm install 指令，安裝 npm 套件</font><br>
+3.在 Terminal 輸入 npm install 指令，安裝 npm 套件<br>
 　　`npm install`<br>
   
 4.執行專案<br>
-　　`npm run dev</font>`<br>
+　　`npm run dev`<br>
   
 5.到瀏覽器輸入網址 http://localhost:3000/<br>
